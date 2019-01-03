@@ -8,9 +8,8 @@ describe('TasksDoneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TasksDoneComponent ]
-    })
-    .compileComponents();
+      declarations: [TasksDoneComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +20,18 @@ describe('TasksDoneComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should add item and increment running id', () => {
+    component.addToDoItem('todoitem');
+    expect(component.itemsDone.size).toBe(1);
+    expect(component.runningID).toBe(1);
+  });
+
+  it('should clear items and set runningid to 0', () => {
+    component.addToDoItem('todoitem');
+    component.clear();
+    expect(component.itemsDone.size).toBe(0);
+    expect(component.runningID).toBe(0);
   });
 });

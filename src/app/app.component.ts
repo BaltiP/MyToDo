@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDo 2019';
+  itemsDone = 0;
 
-  onTransferToDoItem(event) {
-    console.log('onTransferToDoItem asdfasdf');
+  incrementItemsDone() {
+    this.itemsDone++;
   }
 }

@@ -4,24 +4,28 @@ h1 {
 
 div {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
+  padding: 1rem;
   width: 100%;
-  align-content: center;
 }
 
-td,
-th {
-  align-content: center;
-  border: 1px solid orangered;
+.center-div {
+  margin: 0 auto;
+}
+
+.taskstats {
   text-align: center;
-  padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  width: 800px;
+  height: 400px;
+}
+
+.grid-item {
+  border: 1px solid black;
+  width: 400px;
 }

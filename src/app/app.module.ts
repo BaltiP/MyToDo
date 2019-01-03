@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TasksToDoComponent } from './tasks-to-do/tasks-to-do.component';
@@ -13,10 +14,8 @@ import { TasksStatsComponent } from './tasks-stats/tasks-stats.component';
     TasksDoneComponent,
     TasksStatsComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

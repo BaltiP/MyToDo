@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tasks-done',
@@ -7,11 +7,16 @@ import { Component } from '@angular/core';
 })
 export class TasksDoneComponent {
   itemsDone = new Map<number, string>();
-  runningID = 1;
+  runningID = 0;
 
   addToDoItem(event) {
     // console.log('addToDoItem');
-    this.itemsDone.set(this.runningID, event);
     this.runningID++;
+    this.itemsDone.set(this.runningID, event);
+  }
+
+  clear() {
+    this.runningID = 0;
+    this.itemsDone.clear();
   }
 }

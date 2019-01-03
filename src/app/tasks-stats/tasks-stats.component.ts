@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tasks-stats',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks-stats.component.css']
 })
 export class TasksStatsComponent {
-  itemsDone = 0;
+  @Input() itemsDone = 0;
 
   incrementItemsDone() {
     this.itemsDone++;

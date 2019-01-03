@@ -8,11 +8,16 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class TasksToDoComponent {
   @Output() transferItemToDone: EventEmitter<string>;
 
-  toDoItems = new Map<number, string>();
+  inputValue = '';
+  private toDoItems = new Map<number, string>();
   runningID = 1;
 
   constructor() {
     this.transferItemToDone = new EventEmitter();
+  }
+
+  getHeaderString(): string {
+    return 'ToDo';
   }
 
   addToDoItem(event, value) {
@@ -20,6 +25,7 @@ export class TasksToDoComponent {
     if (value !== '') {
       this.toDoItems.set(this.runningID, value);
       this.runningID++;
+      this.inputValue = '';
     }
   }
 
