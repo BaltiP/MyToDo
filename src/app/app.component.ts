@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MyToDo';
+  title = 'ToDo 2019';
+
+  onTransferToDoItem(event) {
+    console.log('onTransferToDoItem asdfasdf');
+  }
 }
