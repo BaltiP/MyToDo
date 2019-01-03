@@ -36,12 +36,4 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('ToDo 2019!');
   });
-
-  it('should increment items itemsdone', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    compiled.incrementItemsDone();
-    expect(compiled.querySelector('h1').textContent).toContain('ToDo 2019!');
-  });
 });
