@@ -10,7 +10,8 @@ export class TasksDoneComponent {
   runningID = 1;
 
   addToDoItem(event) {
+    // console.log('addToDoItem');
     this.itemsDone.set(this.runningID, event);
-    console.log('TasksDoneComponent');
+    this.runningID++;
   }
 }

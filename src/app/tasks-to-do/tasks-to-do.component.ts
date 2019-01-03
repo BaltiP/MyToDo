@@ -16,13 +16,15 @@ export class TasksToDoComponent {
   }
 
   addToDoItem(event, value) {
-    console.log('addToDoItem!');
-    this.toDoItems.set(this.runningID, value);
-    this.runningID++;
+    // console.log('addToDoItem!');
+    if (value !== '') {
+      this.toDoItems.set(this.runningID, value);
+      this.runningID++;
+    }
   }
 
   deleteToDoItem(id: number) {
-    console.log('deleteToDoItem!');
+    // console.log('deleteToDoItem!');
     this.toDoItems.delete(id);
   }
 
