@@ -7,7 +7,7 @@
     <tr class="rowToDo">
       <td class="colTextToDo">
         <input
-          type="text"
+          [attr.type]="'text'"
           #InputField
           (keydown.enter)="addToDoItem($event, InputField.value)"
           [(ngModel)]="inputValue"
@@ -20,7 +20,7 @@
 
     <tr class="rowToDo" *ngFor="let item of (toDoItems | keyvalue)">
       <td class="colTextToDo" (dblclick)="dblclkToDoItem(item.key)">
-        {{ item.value }}
+        {{ item?.value }}
       </td>
       <td class="colBtnToDo">
         <button (click)="deleteToDoItem(item.key)">-</button>

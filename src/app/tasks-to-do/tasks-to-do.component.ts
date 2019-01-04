@@ -9,7 +9,7 @@ export class TasksToDoComponent {
   @Output() transferItemToDone: EventEmitter<string>;
 
   inputValue = '';
-  private toDoItems = new Map<number, string>();
+  toDoItems = new Map<number, string>();
   runningID = 1;
 
   constructor() {
