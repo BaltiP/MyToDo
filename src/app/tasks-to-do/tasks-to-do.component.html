@@ -7,8 +7,9 @@
     <tr class="rowToDo">
       <td class="colTextToDo">
         <input
-          [attr.type]="'text'"
           #InputField
+          [attr.type]="'text'"
+          [style.width]="'100%'"
           (keydown.enter)="addToDoItem($event, InputField.value)"
           [(ngModel)]="inputValue"
         />
